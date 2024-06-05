@@ -1,4 +1,4 @@
-# Smithright DataWorks - Core Architecture Outline
+# Smithright DataWorks - Core Technology Stack Outline
 
 System Functions:
     - Scalable infrastructure for developing, hosting, testing, managing, delivering, and migrating secure & performant data pipelines to and for a fleet of clients.
@@ -10,9 +10,10 @@ Architecture Summary:
     - Event-driven micro-service architecture, prioritizing security, reliability, scalability
     - GCP for Vertex AI, mlops, core service hosting, ingress & scaling
         - Azure for openai model tuning
-    - DataBricks for data engineering & pipelines
+    - DataBricks for big data ops
     - Kafka for streaming
     - Airflow for automations
+    - Secrets mgmt + RBAC + IaC + Stackdriver + IDPS for security
 
 ---
 
@@ -25,6 +26,7 @@ Dev Env:
 
 Secrets & Keys Mgmt:
     Core: Hashicorp Vault
+        dynamic secrets & rotating credentials
     In-network Services: AWS, GCP, Azure for in-network hosted services or API's
 
 Code Repo & Version Control: Git
@@ -35,9 +37,16 @@ Deployment Automation:
     Primary: Github Actions
     Alt: Jenkins
     Deployment Strategy:
-        - Implement language server for pre-deployment test automations and compilation-time debugging & optimizations
+        - Use GitOps best practices 
+        - NixOps?
+        - Implement language server for pre-deployment test automations 
         - Precompile to binaries
         - Load-scaling canary deployments via Istio
+
+Test Automation:
+    Istio fault injection (to test retry & routing logic etc.)
+    Compilation-time debugging & optimizations
+
 
 Service Hosting:
     Primary Compute Host: GCP
@@ -48,6 +57,21 @@ Container Templates:
     Primary: Github Container Registry
     Alt: Jfrog
 
+Service Scaling
+    Define & apply Istio service mesh policies & config via IaC:
+        ingress gateway config
+        load balancing logic
+        canary deployment logic
+        policies for retries, timeouts, circuit breaking
+        other sidecar proxy config
+        opentelemetry config
+
+
+GKE
+    Helm
+    ArgoCD?
+    Flux?
+
 Core Database: Multi-master replicating relational DB
     Host: CRDB Cloud - https://www.cockroachlabs.com/docs/cockroachcloud/
 
@@ -55,11 +79,13 @@ DB Interface: Generated GraphQL
     Host: Hasura Cloud - https://cloud.hasura.io
 
 Logging:
-    ELK Stack
+    OpenTelemetry
+    GCP Stackdriver
+    ELK Stack?
+        Host: GCP Elastic Cloud?
         Log search: Elasticsearch
-        Log ingestion: Logstash
+        Log ingestion & store: Logstash
         Log visualization: Kibana
-    Host: GCP Elastic Cloud
 
 Security:
     System Security Config:
@@ -75,12 +101,15 @@ Security:
                     Container repo
                         Network config
         Log monitoring
-            Prometheus + Grafana
             Stackdriver
             Carefully manage role-based access to logs
         Network & Intrusion detection 
             GCP Network Intel, Cloud Armor, Suricata
     Network Mgmt: 
+        Istio service mesh
+            mutual TLS encryption between services
+            service ID & certificate mgmt 
+        GCP Service Connect
         Suricata
         Snort
         ELK
@@ -104,15 +133,40 @@ Data Governance:
     Compliance (GDPR, CCPA, etc.)
         Collibra
 
-Data Engineering:
-    Streaming ingress & egress:
-        Kafka
-            Hosting: Confluent Cloud - confluent.io
-    Big data ops:
-        Data Bricks
-    Scheduled automations:
-        Apache Airflow
-        GCP Pub/sub, Tasks
+
+
+
+
+Data Engineering & Integrations:
+    Architecture
+        Streaming ingress & egress:
+            Kafka
+                Hosting: Confluent Cloud - confluent.io
+        Big data ops & ETL:
+            Data Bricks
+        Scheduled automations:
+            Apache Airflow
+            GCP Pub/sub, Tasks
+    Internal Service Integrations
+        Notifications
+            email: gmail api
+            SMS & calls: callrail
+            Slack API
+    3rd Party Integrations:
+        Sales & Marketing Automations: Airflow
+            Social platform stream ingress: 
+                kafka => GCP pub/sub for event-based responses
+            Social post broker: Airflow service automations
+        Order to Cash Automations: Airflow
+            Authentication: Clerk.io
+            Purchase & payments: Stripe, Paypal 
+        Procurement & Payment Automations: Airflow
+            Procumement: Stripe, Paypal 
+
+
+
+
+
 
 Service Mesh:
     Public Endpoint Documentation: ?
@@ -120,6 +174,15 @@ Service Mesh:
     Ingestion & Routing: Istio
         Service Metrics: Prometheus
     Hosting: GCP GKE
+    Endpoint naming & routing:
+        GCP managed DNS
+        assign internal service endpoint names to handshake.org blockchain domains on an owned tld (for simple naming and added security)
+
+Reporting & Analytics
+    Hasura / SQL
+    PowerBI / Python
+    GCP Stackdriver / Bigquery
+    Google Analytics
 
 MLops:
     GCP Vertex AI
@@ -153,7 +216,7 @@ Performance considerations:
 
     Leverage parallel processing whenever possible
         Use CUDA or DPC++ to leverage GPU's or TPU's for parallel loops, matrix math, or other tensor operations 
-        Queue large compute loads and scale horizontally via CUDA cloud or GCP pub/sub
+        Queue large compute loads and scale horizontally via CUDA cloud or GCP pub/sub => GKE
         Prioritize multi-plexing network protocols: grpc, quic
         Use languages & compilers that optimize compilation & memory allocation e.g. rust, mojo, bend, zig
         Use languages and design applications for performant multi-threading e.g. golang, bend
@@ -178,13 +241,15 @@ Performance considerations:
             Reports: Grafana
         Migrate performance-critical functions to field programmable gate arrays (FPGA's) nearest to key endpoints
         Optimize the network stack for edge compute & streaming
-            Use DHCP protocols & DMA to skip the kernel and post data streams directly to memory regions
+            Use DHCP protocols & DMA to skip the kernel and post data streams directly to memory regions.
             Offload network stack features from the kernel to a smartNIC
-            Assemble outgoing multiplexing packets with pre-compressed structures directly on a scalable DPU server stack
-            Migrate remote services inside the network to avoid encryption and data transfer overhead
+            Assemble outgoing multiplexing packets with pre-compressed structures directly on a scalable DPU server stack.
+            Migrate remote services inside a secure network to avoid encryption and data transfer overhead.
 
 Compute cost considerations:
 
     Avoid cloud & vendor lockin
 
     Use middleware to decouple service endpoints from infrastructure e.g. Istio, graphql
+
+    Consider dynamic service cost comparisons and load balancing across multiple clouds & service providers
