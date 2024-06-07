@@ -124,8 +124,29 @@
                         Ticketing interface to Airtable
                     Data Engineering - Internal Services
                         System & Service Catalog Feeds
-                            Istio logs => GCP pub/sub => service change channels => queue updates to airtable catalogs for role-based review & approval
-                        Kafka Ingress & Routing Streams
+                            Istio service discovery & logs => GCP pub/sub => service change channels => queue updates to airtable catalogs for role-based review & approval
+                        Service Catalog Site
+                            Generated Service Directory Page (based on user permissions)
+                                Generated service link graph
+                                Uptime graphs
+                            Generated Service Info Pages (conditional visibility and modules based on public/private authenticated permissions)
+                                Service Roles
+                                    Owner
+                                    Other Stakeholders
+                                Access
+                                    GraphQL
+                                        Service spec
+                                            schema
+                                            input params
+                                            output format
+                                        View current permissions summary
+                                            Request access
+                                Usage (RBAC limited)
+                                    Log Query interface
+                                    Live graphs
+                                        Graph interface
+                                Wiki.js
+                        GCP DataFlow Ingress & Routing Streams
                             Airtable CDC 
                                 => GCP pub/sub (for optional channel event logic)
                                 => CRDB read-only views

@@ -36,6 +36,7 @@ Code Repo & Version Control: Git
 Deployment Automation:
     Primary: Github Actions
     Alt: Jenkins
+    IaC generation: nitric.io
     Deployment Strategy:
         - Use GitOps best practices 
         - NixOps?
@@ -79,13 +80,7 @@ DB Interface: Generated GraphQL
     Host: Hasura Cloud - https://cloud.hasura.io
 
 Logging:
-    OpenTelemetry
-    GCP Stackdriver
-    ELK Stack?
-        Host: GCP Elastic Cloud?
-        Log search: Elasticsearch
-        Log ingestion & store: Logstash
-        Log visualization: Kibana
+    OpenTelemetry => Beam on GCP DataFlow => GCP BigQuery + Stackdriver
 
 Security:
     System Security Config:
@@ -123,13 +118,14 @@ Security:
 Data Governance:
     Provenance and pipeline mapping: 
         Apache Atlas
-    Endpoint mapping & service documentation: 
-        GCP Endpoints
-        OpenAPI/Swagger
-        Hasura
-        Airflow Directed Acyclic Graphs (DAG's)
     Internal info architecture governance: 
+        Istio => CRDB service catalog, including detailed service meta data
         GCP Data Catalog
+    Endpoint mapping & service documentation: 
+        Hasura generated schemas
+        Airflow Directed Acyclic Graphs (DAG's)
+        Internal service catalog site
+
     Compliance (GDPR, CCPA, etc.)
         Collibra
 
@@ -171,17 +167,20 @@ Data Engineering & Integrations:
 Service Mesh:
     Public Endpoint Documentation: ?
     Private Endpoint Documentation: 
+    Endpoint gateway: Hasura Cloud GraphQL via GCP Service Connect
+        Manage GraphQL gateway RBAC IaC via Hasura Cloud
     Ingestion & Routing: Istio
-        Service Metrics: Prometheus
-    Hosting: GCP GKE
+        Service Metrics: OpenTelemetry
+        Hosting: GCP GKE
     Endpoint naming & routing:
         GCP managed DNS
         assign internal service endpoint names to handshake.org blockchain domains on an owned tld (for simple naming and added security)
 
 Reporting & Analytics
     Hasura / SQL
-    PowerBI / Python
-    GCP Stackdriver / Bigquery
+    Apache Superset / Python
+    OpenTelemetry / Bigquery
+        Istio Health checks
     Google Analytics
 
 MLops:
