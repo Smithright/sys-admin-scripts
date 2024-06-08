@@ -14,63 +14,52 @@ Nova Mente (nova@smithright.com) | Celestial Guardian of Humanity - Smithright D
 ### 1.1 Memory Networks (MN)
 
 #### 1.1.1 Hierarchical Memory Networks (HMNs)
-- **Structure & Functionality (S&F)**: [Memory Layers (ML)](https://en.wikipedia.org/wiki/Memory_networks), [Attention Mechanisms (AM)](https://en.wikipedia.org/wiki/Attention_mechanism_(machine_learning)), [Temporal Encoding (TE)](https://en.wikipedia.org/wiki/Temporal_encoding), [Scalability and Efficiency (SE)](https://en.wikipedia.org/wiki/Scalability)
+- **Structure & Functionality (S&F)**: [Memory Layers (ML)](https://arxiv.org/pdf/1605.07427), [Attention Mechanisms (AM)](https://en.wikipedia.org/wiki/Attention_(machine_learning)), [Temporal Encoding (TE)](https://en.wikipedia.org/wiki/Temporal_encoding)
 - **Key Research & Applications (KRA)**: 
-  - [Sukhbaatar et al. 2015 (S15)](https://arxiv.org/abs/1503.08895), [Weston et al. 2015 (W15)](https://arxiv.org/abs/1410.3916)
-  - **Applications (APP)**: [Natural Language Processing (NLP)](https://en.wikipedia.org/wiki/Natural_language_processing), [Reinforcement Learning (RL)](https://en.wikipedia.org/wiki/Reinforcement_learning), [Computer Vision (CV)](https://en.wikipedia.org/wiki/Computer_vision), [Multi-Modal Learning (MML)](https://en.wikipedia.org/wiki/Multimodal_learning)
-- **Extensions**: [Transformers (TRF)](https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)), [Memory-Driven Attention (MDA)](https://arxiv.org/abs/1905.06494), [Hierarchical Reinforcement Learning (HRL)](https://en.wikipedia.org/wiki/Hierarchical_reinforcement_learning), [Attention Mechanism Optimization (AMO)](https://arxiv.org/abs/1602.04832), [Differentiable Neural Computers (DNC)](https://arxiv.org/abs/1606.03644), [Hypergraph Neural Networks (HNN)](https://arxiv.org/abs/1906.00121), [Graph Memory Networks (GMN)](https://arxiv.org/abs/1803.01015), [Sparse Access Memory (SAM)](https://arxiv.org/abs/1903.01161)
+  - [End-To-End Memory Networks, Sukhbaatar et al. 2015 (S15)](https://arxiv.org/abs/1503.08895), [Memory Networks, Weston et al. 2015 (W15)](https://arxiv.org/abs/1410.3916)
+  - **Applications (APP)**: [Natural Language Processing (NLP)](https://en.wikipedia.org/wiki/Natural_language_processing), [Reinforcement Learning (RL)](https://en.wikipedia.org/wiki/Reinforcement_learning), [Multi-Modal Learning (MML)](https://en.wikipedia.org/wiki/Multimodal_learning)
+- **Extensions**: [Transformers (TRF)](https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)), [Hierarchical Reinforcement Learning (HRL)](https://openai.com/index/learning-a-hierarchy/), [Attention Mechanism Optimization (AMO)](https://ieeexplore.ieee.org/document/9870430), [Hypergraph Neural Networks (HNN)](https://arxiv.org/abs/1809.09401), [Graph Memory Networks (GMN)](https://arxiv.org/abs/2002.09518), [Sparse Access Memory (SAM)](https://arxiv.org/abs/1610.09027)
 
 #### 1.1.2 Episodic Memory Augmented Networks (EMANs)
-- **Cognitive Science Inspirations (CSI)**: [Tulving 1972 (T72)](https://link.springer.com/article/10.1007/BF00485047), [Buzsáki 2006 (B06)](https://pubmed.ncbi.nlm.nih.gov/17148658/), [Eichenbaum 2017 (E17)](https://www.annualreviews.org/doi/abs/10.1146/annurev-psych-010416-044131), [Moscovitch et al. 2016 (M16)](https://pubmed.ncbi.nlm.nih.gov/26786775/)
-- **Implementation in Neural Networks (I-NN)**: [Memory Buffer (MB)](https://en.wikipedia.org/wiki/Memory_buffer), [Attention Mechanism (AM)](https://en.wikipedia.org/wiki/Attention_mechanism_(machine_learning)), [Reinforcement Learning (RL)](https://en.wikipedia.org/wiki/Reinforcement_learning), [Episodic Control (EC)](https://arxiv.org/abs/1703.07642), [Experience Replay (ER)](https://arxiv.org/abs/1312.5602)
-- **Performance Metrics & Evaluation (PM&E)**: [Benchmarks (BM)](https://en.wikipedia.org/wiki/Benchmark_(computing)), Metrics (M): [Precision (PR)](https://en.wikipedia.org/wiki/Precision_and_recall), [Recall (R)](https://en.wikipedia.org/wiki/Precision_and_recall), [F1-Score (F1)](https://en.wikipedia.org/wiki/F1_score), [Comparative Studies (CS)](https://en.wikipedia.org/wiki/Comparison_of_machine_learning_algorithms), [Few-Shot Learning Evaluation (FSLE)](https://en.wikipedia.org/wiki/Few-shot_learning), [Lifelong Learning Assessment (LLA)](https://arxiv.org/abs/2007.13904)
-- **Advanced Implementations**: [Hybrid Models (HYB)](https://en.wikipedia.org/wiki/Hybrid_intelligent_system), [Temporal-Difference Learning (TDL)](https://en.wikipedia.org/wiki/Temporal_difference_learning), [Generative Models (GM)](https://en.wikipedia.org/wiki/Generative_model), [Neuro-Symbolic AI (NSAI)](https://arxiv.org/abs/2003.00330), [Neural Ordinary Differential Equations (NODEs)](https://arxiv.org/abs/1806.07366), [Algorithmic Information Theory (AIT)](https://en.wikipedia.org/wiki/Algorithmic_information_theory), [Graph Neural Networks (GNN)](https://en.wikipedia.org/wiki/Graph_neural_network), [Variational Autoencoders (VAE)](https://arxiv.org/abs/1312.6114), [Generative Adversarial Networks (GAN)](https://en.wikipedia.org/wiki/Generative_adversarial_network)
+- **Cognitive Science Inspirations (CSI)**: [Episodic & Semantic Memory, Tulving 1972 (T72)](https://www.semanticscholar.org/paper/Episodic-and-semantic-memory-Tulving/d792562462dbb687015954805d31620240db57a1), [Rhythms of the Brain, Buzsáki 2006 (B06)](https://academic.oup.com/book/11166?login=false), [Memory: Organization and Control, Eichenbaum 2017 (E17)](https://www.annualreviews.org/doi/abs/10.1146/annurev-psych-010416-044131), [Episodic Memory and Beyond, Moscovitch et al. 2016 (M16)](https://pubmed.ncbi.nlm.nih.gov/26786775/)
+- **Implementation in Neural Networks**: [Neuromorphic Computing (NC)](https://en.wikipedia.org/wiki/Neuromorphic_engineering), [Neural Networks](https://en.wikipedia.org/wiki/Neural_network), [Memory Buffers](https://en.wikipedia.org/wiki/Memory_buffer), [Attention Mechanism](https://en.wikipedia.org/wiki/Attention_mechanism_(machine_learning)), [Reinforcement Learning (RL)](https://en.wikipedia.org/wiki/Reinforcement_learning), [Episodic Control](https://arxiv.org/abs/1606.04460), [Experience Replay](https://arxiv.org/abs/2007.06700), [Language Modeling (LM)](https://en.wikipedia.org/wiki/Language_model), [Large Language Models (LLM)](https://en.wikipedia.org/wiki/Large_language_model)
+- **Performance Metrics & Evaluation**: [Benchmarks](https://huggingface.co/collections/open-llm-leaderboard/the-big-benchmarks-collection-64faca6335a7fc7d4ffe974a), Metrics (M): [Precision & Recall](https://en.wikipedia.org/wiki/Precision_and_recall), [F-Score](https://en.wikipedia.org/wiki/F1_score), [Evaluation Measures](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)), [in progress...]
+- **Advanced Implementations**: [Hybrid Models](https://en.wikipedia.org/wiki/Hybrid_intelligent_system), [Temporal-Difference Learning (TDL)](https://en.wikipedia.org/wiki/Temporal_difference_learning), [Generative Models](https://en.wikipedia.org/wiki/Generative_model), [Neuro-Symbolic AI (NSAI)](https://arxiv.org/abs/2003.00330), [Neural Ordinary Differential Equations (NODEs)](https://arxiv.org/abs/1806.07366), [Graph Neural Networks (GNN)](https://en.wikipedia.org/wiki/Graph_neural_network), [Variational Autoencoders (VAE)](https://arxiv.org/abs/1312.6114), [Generative Adversarial Networks (GAN)](https://en.wikipedia.org/wiki/Generative_adversarial_network)
 
-#### 1.1.3 Memory-Augmented Neural Networks (MANNs)
-- **Architectural Overview (AO)**: [Memory Module (MM)](https://arxiv.org/abs/2006.11527), [Controller (C)](https://en.wikipedia.org/wiki/Control_unit), [Differentiable Access (DA)](https://arxiv.org/abs/1606.03644), [Read-Write Heads (RWH)](https://arxiv.org/abs/1606.03644), [Addressing Mechanisms (AM)](https://arxiv.org/abs/1606.03644)
-- **Integration with Existing AI Systems (I-EAIS)**: [Compatibility (CP)](https://en.wikipedia.org/wiki/Compatibility), [Scalability (SC)](https://en.wikipedia.org/wiki/Scalability), [Training Techniques (TT)](https://en.wikipedia.org/wiki/Machine_learning), [Transfer Learning (TL)](https://en.wikipedia.org/wiki/Transfer_learning), [Modular Design (MD)](https://en.wikipedia.org/wiki/Modular_programming)
-- **Case Studies & Use Cases (CSU)**: 
-  - **Algorithmic Tasks (AT)**: [Sorting (SRT)](https://en.wikipedia.org/wiki/Sorting_algorithm)
-  - **Natural Language Processing (NLP)**: [Text Generation (TG)](https://en.wikipedia.org/wiki/Text_generation), [Language Modeling (LM)](https://en.wikipedia.org/wiki/Language_model)
-  - **Reinforcement Learning (RL)**: [Improved Performance in Long-Term Dependencies (IP-LTD)](https://arxiv.org/abs/2005.05110)
-  - **Robotics (RBT)](https://en.wikipedia.org/wiki/Robotics), [Autonomous Agents (AA)](https://en.wikipedia.org/wiki/Autonomous_agent)
-- **Neuroscientific Foundations (NF)**: Each concept to include relevant neuroscientific insights, [Hippocampal-Cortical Interactions (HCI)](https://pubmed.ncbi.nlm.nih.gov/19575328/), [Synaptic Plasticity (SP)](https://en.wikipedia.org/wiki/Synaptic_plasticity)
+#### 1.1.3 Memory-Augmented Neural Networks
+[MANN](https://arxiv.org/abs/2010.01939), [Differentiable Neural Computers (DNC)](https://en.wikipedia.org/wiki/Differentiable_neural_computer), [Memory Transformer](https://arxiv.org/abs/2006.11527), [LLM Read/Write Control (MemLLM)](https://arxiv.org/abs/2404.11672), [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning), ,
 
-### 1.2 Dynamic Learning & Adaptation (DLA)
+### 1.2 Dynamic Learning & Adaptation
 
-#### 1.2.1 Meta-Learning: Theory & Practice (MLT&P)
+#### 1.2.1 Meta-Learning: Theory & Practice
+- [Lifelong Machine Learning (LLML)] (https://www.sciencedirect.com/science/article/pii/S0893608019300231)
+- [Ensemble Learning] (https://en.wikipedia.org/wiki/Ensemble_learning)
 - [Model-Agnostic Meta-Learning (MAML)](https://arxiv.org/abs/1703.03400)
-- [Prototypical Networks (PN)](https://arxiv.org/abs/1703.05175)
-- [Advanced Meta-Learning Techniques (AMT)](https://arxiv.org/abs/2004.05439)
-- [Meta-Dataset Learning (MDL)](https://arxiv.org/abs/1903.03096)
-- [Online Meta-Learning (OML)](https://arxiv.org/abs/1806.04640)
+- [Prototypical Networks](https://arxiv.org/abs/1703.05175)
+- [Advanced Meta-Learning Techniques](https://arxiv.org/abs/2004.05439)
+- [Meta-Dataset Learning](https://arxiv.org/abs/1903.03096)
+- [Online Meta-Learning (OML)](https://arxiv.org/abs/1902.08438)
 
-#### 1.2.2 Few-Shot & Zero-Shot Learning (FS&ZSL)
-- **Theoretical Underpinnings (TU)**: [Few-Shot Learning (FSL)](https://en.wikipedia.org/wiki/Few-shot_learning), [Zero-Shot Learning (ZSL)](https://en.wikipedia.org/wiki/Zero-shot_learning)
-- **Practical Implementations (PI)**: [Prototypical Networks (PN)](https://arxiv.org/abs/1703.05175)
-- **Comparative Studies (CS)**: [Comparison of Machine Learning Algorithms](https://en.wikipedia.org/wiki/Comparison_of_machine_learning_algorithms)
+#### 1.2.2 Few-Shot & Zero-Shot Learning
+- **Theoretical Underpinnings**: [Few-Shot Learning (FSL)](https://www.ibm.com/topics/few-shot-learning), [Zero-Shot Learning (ZSL)](https://en.wikipedia.org/wiki/Zero-shot_learning)
+- **Practical Implementations**: [Prototypical Networks (PN)](https://arxiv.org/abs/1703.05175)
+- **Comparative Studies**: 
 - [Task-Agnostic Meta-Learning (TAML)](https://arxiv.org/abs/2007.00120)
-- [Cross-Modal Transfer (CMT)](https://en.wikipedia.org/wiki/Cross-modal_learning)
+- [Cross-Modal Transfer](https://link.springer.com/referenceworkentry/10.1007/978-3-319-47829-6_1749-1)
+- [Cross-Modal Learning](https://link.springer.com/referenceworkentry/10.1007/978-1-4419-1428-6_239)
 
-#### 1.2.3 Continual Learning & Lifelong Learning (CL&LL)
-- **Frameworks & Architectures (F&A)**: [Continual Learning (CL)](https://en.wikipedia.org/wiki/Continual_learning), [Lifelong Learning (LL)](https://arxiv.org/abs/1907.01929)
-- **Case Studies (CS)**: [Research Papers](https://arxiv.org/abs/2009.11551)
-- **Metrics & Evaluation (M&E)**: [Metrics in AI](https://en.wikipedia.org/wiki/Evaluation_measures_(information_retrieval)), [Benchmarks](https://en.wikipedia.org/wiki/Benchmark_(computing))
-- [Catastrophic Forgetting Mitigation (CFM)](https://arxiv.org/abs/1612.00796)
-- [Elastic Weight Consolidation (EWC)](https://arxiv.org/abs/1612.00796)
+#### 1.2.3 Continual Learning & Lifelong Learning
+- [Continual Learning](https://ieeexplore.ieee.org/document/10341211), [Incremental Learning (CL)](https://en.wikipedia.org/wiki/Continual_learning), [Lifelong Learning (LL)](https://arxiv.org/abs/1907.01929), [Continual Meta-Learning](https://arxiv.org/abs/1907.01929), [Catastrophic Forgetting Mitigation (CFM)](https://arxiv.org/abs/1612.00796), [Elastic Weight Consolidation (EWC)](https://arxiv.org/abs/1612.00796)
 
 #### 1.2.4 New Paradigms (NP)
+- [Algorithmic Information Theory (AIT)](https://en.wikipedia.org/wiki/Algorithmic_information_theory)
 - [Neural Architecture Search (NAS)](https://en.wikipedia.org/wiki/Neural_architecture_search)
-- [Continual Meta-Learning (CML)](https://arxiv.org/abs/1907.01929)
-- [Zero-Resource Learning (ZRL)](https://arxiv.org/abs/1804.09662)
-- [Game Theory (GT)](https://en.wikipedia.org/wiki/Game_theory)
-- [Quantum Algorithmic Learning (QAL)](https://arxiv.org/abs/1901.03393)
+- [Game Theory](https://en.wikipedia.org/wiki/Game_theory)
+- [Quantum Algorithmic Learning (QAL)](https://www.nature.com/articles/nature23474)
 - [Contrastive Predictive Coding (CPC)](https://arxiv.org/abs/1807.03748)
 - [Adaptive Resonance Theory (ART)](https://en.wikipedia.org/wiki/Adaptive_resonance_theory)
-- [Self-Improving AI (SIAI)](https://arxiv.org/abs/1909.06820)
-- [Neuromorphic Computing (NC)](https://en.wikipedia.org/wiki/Neuromorphic_engineering)
-- [Information-Theoretic Learning (ITL)](https://en.wikipedia.org/wiki/Information_theoretic_learning)
-- [Accelerated Evolutionary Algorithms (AEA)](https://arxiv.org/abs/1907.11443)
+- [Information-Theoretic Learning (ITL)](https://link.springer.com/book/10.1007/978-1-4419-1570-2)
+- [Accelerated Evolutionary Algorithms](https://github.com/EMI-Group/evox)
 - [Open Distributed Learning (ODL)](https://arxiv.org/abs/1905.05631)
 - [Self-Paced Learning (SPL)](https://arxiv.org/abs/1703.06182)
 - [Multi-Modal Learning (MML)](https://en.wikipedia.org/wiki/Multimodal_learning)
@@ -114,7 +103,7 @@ Nova Mente (nova@smithright.com) | Celestial Guardian of Humanity - Smithright D
 - [Long Short-Term Memory (LSTM)](https://en.wikipedia.org/wiki/Long_short-term_memory)
 - [Gated Recurrent Units (GRUs)](https://en.wikipedia.org/wiki/Gated_recurrent_unit)
 - [Attention Mechanisms (e.g., Self-Attention, Multi-Head Attention)](https://en.wikipedia.org/wiki/Attention_mechanism_(machine_learning))
-- [Transformer-based Memory (e.g., Transformer-XL, Longformer)](https://arxiv.org/abs/1901.02860), [Longformer](https://arxiv.org/abs/2004.05150)
+- [Transformer-based Memory (e.g., Transformer-XL, Longformer)](https://arxiv.org/abs/1901.02860), - [Longformer](https://arxiv.org/abs/2004.05150)
 
 ### 2.4 External and Augmented Memory
 - [Neural Turing Machines (NTMs)](https://arxiv.org/abs/1410.5401)

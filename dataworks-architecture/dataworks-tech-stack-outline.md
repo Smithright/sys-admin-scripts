@@ -22,12 +22,12 @@ For more details, please refer to the individual sections and associated documen
 ## Architecture Summary
 
 - **Security:** Secrets management, RBAC/Iam, IaC Policies & Config, OpenTelemetry, Log Monitoring & Events, IDPS. (see details below)
-- **CICD:** Code Repos & Artifactory ([GitHub](https://github.com)), CICD Automations ([GitHub Actions](https://github.com/features/actions) + [GCP Dataflow](https://cloud.google.com/dataflow) / [Workflows](https://cloud.google.com/workflows))
+- **CICD:** Code Repos & Artifactory ([GitHub](https://github.com/smithright)), CICD Automations ([GitHub Actions](https://github.com/features/actions) + [GCP Dataflow](https://cloud.google.com/dataflow) / [Workflows](https://cloud.google.com/workflows))
 - **Databases:** Scalable SQL OLTP ([Cloud Spanner](https://cloud.google.com/spanner)), Data Warehouse ([GCP BigQuery](https://cloud.google.com/bigquery)), Large Files ([GCP Storage](https://cloud.google.com/storage)), CRM + Project Mgmt + Accounting ([Airtable](https://airtable.com))
 - **Services & Applications:** Service Hosting ([GCP Cloud Run](https://cloud.google.com/run) + [GKE](https://cloud.google.com/kubernetes-engine)), Service Mesh ([GCP Istio](https://istio.io)), GraphQL ([Hasura Cloud](https://hasura.io/cloud))
 - **Data Engineering:** Data Pipeline Framework ([Apache Beam](https://beam.apache.org) via [GCP Dataflow](https://cloud.google.com/dataflow) + [Workflows](https://cloud.google.com/workflows)), Stream Ingress + Logging & Event Handling ([GCP Pub/Sub](https://cloud.google.com/pubsub)), MLOps ([Vertex AI](https://cloud.google.com/vertex-ai))
 - **Reporting & Analysis:** [Apache Superset](https://superset.apache.org) + [Jupyter](https://jupyter.org) / [Python](https://www.python.org), Financial Analysis & Trading Automations ([FinGPT](https://github.com/AI4Finance-Foundation/FinGPT) + [TradingView](https://www.tradingview.com))
-- **AI:** Trained Model Repo ([Hugging Face](https://huggingface.co)), Model selection, training, tuning ([Vertex AI](https://cloud.google.com/vertex-ai) + [Azure AI Studio](https://azure.microsoft.com/en-us/services/machine-learning/)), AI Agent Memory & RAG via Knowledge Graph ([GCP Managed](https://cloud.google.com/ai/knowledge-graph)), Agentic Teaming ([GCP Pub/Sub Events](https://cloud.google.com/pubsub) + [Apache Beam](https://beam.apache.org) via [GCP Dataflow](https://cloud.google.com/dataflow) / [Workflows](https://cloud.google.com/workflows))
+- **AI:** Trained Model Repo ([Hugging Face](https://huggingface.co)), Model selection, training, tuning ([Vertex AI](https://cloud.google.com/vertex-ai) + [Azure AI Studio](https://azure.microsoft.com/en-us/services/machine-learning/)), AI Agent Memory & RAG via Knowledge Graph ([GCP Managed](https://cloud.google.com/enterprise-knowledge-graph/docs/overview)), Agentic Teaming ([GCP Pub/Sub Events](https://cloud.google.com/pubsub) + [Apache Beam](https://beam.apache.org) via [GCP Dataflow](https://cloud.google.com/dataflow) / [Workflows](https://cloud.google.com/workflows))
 - **3rd Party Services:** Payment Gateway ([Stripe](https://stripe.com)), Marketing Platforms ([LinkedIn](https://www.linkedin.com), [Upwork](https://www.upwork.com))
 
 ---
@@ -53,8 +53,8 @@ For more details, please refer to the individual sections and associated documen
 - **Alternate:** [Jenkins](https://www.jenkins.io).
 - **IaC Generation:** [Nitric.io](https://nitric.io).
 - **Deployment Strategy:**
-    - Use [GitOps](https://www.gitops.tech) best practices.
-    - Consider [NixOps](https://nixos.org/manual/nixops/).
+    - Use [GitOps](https://www.redhat.com/en/topics/devops/what-is-gitops) best practices.
+    - Consider [NixOps](https://github.com/NixOS/nixops).
     - Implement language server for pre-deployment test automations.
     - Precompile to binaries.
     - Load-scaling canary deployments via [Istio](https://istio.io).
@@ -62,6 +62,7 @@ For more details, please refer to the individual sections and associated documen
 ## Test Automation
 - **Fault Injection:** [Istio](https://istio.io) to test retry and routing logic.
 - **Debugging & Optimizations:** Compilation-time.
+- [more to come]
 
 ## Service Hosting
 - **Primary Compute Host:** [GCP](https://cloud.google.com).
@@ -167,7 +168,7 @@ For more details, please refer to the individual sections and associated documen
 ## Knowledge Graph
 - **Platform:** [GCP Knowledge Graph](https://cloud.google.com/ai/knowledge-graph).
     - **Usage:** Integrate data from multiple sources, extract entities, and establish relationships. Provides a unified source of truth and aids in data discovery, pattern recognition, and entity linking.
-    - **API:** [Entity Reconciliation API](https://cloud.google.com/ai/knowledge-graph/entity-reconciliation-api) and [Knowledge Graph Search API](https://cloud.google.com/knowledge-graph) for building and querying the knowledge graph.
+    - **API:** [Entity Reconciliation API](https://cloud.google.com/enterprise-knowledge-graph/docs/overview) and [Knowledge Graph Search API](https://cloud.google.com/enterprise-knowledge-graph/docs/overview) for building and querying the knowledge graph.
 
 ## Frontend
 - **Framework:** [Next.js](https://nextjs.org).
@@ -195,20 +196,20 @@ For more details, please refer to the individual sections and associated documen
     - Queue large compute loads and scale horizontally via [CUDA Cloud](https://developer.nvidia.com/cuda-zone) or [GCP Pub/Sub](https://cloud.google.com/pubsub) => [GKE](https://cloud.google.com/kubernetes-engine).
     - Prioritize multiplexing network protocols ([gRPC](https://grpc.io), [QUIC](https://www.chromium.org/quic)).
     - Use performance-optimized languages ([Rust](https://www.rust-lang.org), [Mojo](https://www.modular.com/mojo), [Bend](https://www.bend-lang.org), [Zig](https://ziglang.org)).
-    - Design for multi-threading ([Golang](https://golang.org), [Bend](https://www.bend-lang.org)).
-    - Explore quantum computation algorithms ([Nvidia](https://www.nvidia.com/en-us/research/quantum-computing), [IBM](https://www.ibm.com/quantum-computing/what-is-quantum-computing), [Google](https://quantumai.google)).
+    - Design for multi-threading ([Golang](https://golang.org), [Bend](https://github.com/HigherOrderCO/bend)).
+    - Explore quantum computation algorithms ([Nvidia](https://www.nvidia.com/en-us/solutions/quantum-computing/), [IBM](https://www.ibm.com/quantum-computing/what-is-quantum-computing), [Google](https://quantumai.google)).
         - **Simulation Framework:** [Qiskit](https://qiskit.org).
 - **Service Deployment:**
     - Deploy pre-compiled binaries to avoid runtime compilation delays.
 - **Frontend Performance:**
     - Leverage [CDNs](https://www.cloudflare.com/learning/cdn/what-is-a-cdn) for static content delivery.
-    - Use [React server components](https://reactjs.org/docs/react-api.html#reactservercomponent) for edge network rendering.
+    - Use [React server components](https://react.dev/reference/rsc/server-components) for edge network rendering.
     - Consider [WebAssembly](https://webassembly.org) as a compilation target.
 - **Network Optimization:**
     - Migrate from public internet to in-network service mesh.
     - Use [DHCP](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol) and [DMA](https://en.wikipedia.org/wiki/Direct_memory_access) for efficient data stream handling.
-    - Offload network stack features to [smartNIC](https://www.nvidia.com/en-us/networking/products/smartnic).
-    - Assemble multiplexing packets on [DPU server stack](https://www.nvidia.com/en-us/networking/products/data-processing-unit).
+    - Offload network stack features to [smartNIC](https://blogs.nvidia.com/blog/what-is-a-smartnic/).
+    - Assemble multiplexing packets on [DPU server stack](hhttps://en.wikipedia.org/wiki/Data_processing_unit).
 - **Cost Considerations:**
     - Avoid vendor lock-in.
     - Use middleware to decouple endpoints ([Istio](https://istio.io), [GraphQL](https://graphql.org)).
